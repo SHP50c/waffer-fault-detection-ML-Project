@@ -20,7 +20,7 @@ from xgboost import XGBClassifier
 @dataclass
 class ModelTrainerConfig:
     artifact_folder=os.path.join(artifact_folder)
-    trained_model_path=os.path.join(artifact_folder)
+    trained_model_path=os.path.join(artifact_folder,"model.pkl")
     model_config_file_path=os.path.join('config','model.yaml')
 
 

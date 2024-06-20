@@ -1,0 +1,20 @@
+[ 2024-06-20 10:48:44,239 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2024-06-20 10:48:44,267 ] 224 werkzeug - INFO -  * Debugger PIN: 126-193-033
+[ 2024-06-20 10:52:43,658 ] 107 root - INFO - Prediction pipeline has begun
+[ 2024-06-20 10:52:43,658 ] 43 root - INFO - Creating the file path
+[ 2024-06-20 10:52:43,667 ] 84 root - INFO - Dataframe has been received from the user
+[ 2024-06-20 10:52:43,667 ] 86 root - INFO - Dataframe is being converted to pandas dataframe
+[ 2024-06-20 10:52:43,908 ] 88 root - INFO - Cleaning the data
+[ 2024-06-20 10:52:43,909 ] 59 root - INFO - Predicting the output
+[ 2024-06-20 10:52:43,909 ] 36 root - INFO - Load object fn. start
+[ 2024-06-20 10:52:44,028 ] 40 root - INFO - object was loaded sucessfully
+[ 2024-06-20 10:52:44,029 ] 36 root - INFO - Load object fn. start
+[ 2024-06-20 10:52:44,030 ] 40 root - INFO - object was loaded sucessfully
+[ 2024-06-20 10:52:44,128 ] 64 root - INFO - Prediction was done sucessfully
+[ 2024-06-20 10:52:44,129 ] 91 root - INFO - Creating the prediction column in dataframe and decoding the output
+[ 2024-06-20 10:52:44,134 ] 95 root - INFO - Saving the predicted dataframe
+[ 2024-06-20 10:52:44,567 ] 98 root - INFO - Prediction completed
+[ 2024-06-20 10:52:44,567 ] 110 root - INFO - Prediction pipeline completed
+[ 2024-06-20 10:52:44,568 ] 40 root - INFO - prediction completed. Downloading prediction file.
+[ 2024-06-20 10:52:44,598 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:52:44] "[35m[1mPOST /predict HTTP/1.1[0m" 0 -
+[ 2024-06-20 10:52:44,659 ] 224 werkzeug - INFO -  * Detected change in 'D:\\my stuff.dll\\New Courses\\PWSkills\\PWSkills Data Science\\MLProjectsPW\\WaferFaultDetection\\app.py', reloading

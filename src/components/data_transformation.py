@@ -89,7 +89,7 @@ class DataTransformation:
             dataframe=self.get_data(feature_store_file_path=self.feature_store_file_path)
 
             logging.info('segregating independent and dependent values')
-            X=dataframe.drop(columns='TARGET_COLUMN')
+            X=dataframe.drop(columns=TARGET_COLUMN)
             y=np.where(dataframe[TARGET_COLUMN]==-1,0,1) #replacing the -1 with 0 for model training
 
             logging.info('splitting the data into training and testing dataset')
@@ -106,7 +106,7 @@ class DataTransformation:
             train_arr=np.c_[X_train_scaled,np.array(y_train)]
             test_arr=np.c_[X_test_scaled,np.array(y_test)]
             
-            logging.info('Saving of processor.pkl file started')
+            logging.info('Saving of preprocessor.pkl file started')
             preprocessor_path=self.data_transformation_config.transformed_object_file_path
             os.makedirs(os.path.dirname(preprocessor_path),exist_ok=True)
             save_object(file_path=preprocessor_path,obj=preprocessor_obj)

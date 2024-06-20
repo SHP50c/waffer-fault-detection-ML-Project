@@ -1,0 +1,13 @@
+[ 2024-06-20 11:22:01,404 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2024-06-20 11:22:01,428 ] 224 werkzeug - INFO -  * Debugger PIN: 126-193-033
+[ 2024-06-20 11:22:38,211 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:22:38] "[35m[1mGET /download/predicted_file.csv HTTP/1.1[0m" 500 -
+[ 2024-06-20 11:22:38,489 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:22:38] "[36mGET /download/predicted_file.csv?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-06-20 11:22:38,491 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:22:38] "[36mGET /download/predicted_file.csv?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-06-20 11:22:39,046 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:22:39] "[36mGET /download/predicted_file.csv?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-06-20 11:22:39,327 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:22:39] "[36mGET /download/predicted_file.csv?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-06-20 11:23:22,132 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:23:22] "[35m[1mGET /download/predicted_file.csv HTTP/1.1[0m" 500 -
+[ 2024-06-20 11:23:22,858 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:23:22] "[36mGET /download/predicted_file.csv?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-06-20 11:23:23,319 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:23:23] "[36mGET /download/predicted_file.csv?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-06-20 11:23:23,982 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:23:23] "[36mGET /download/predicted_file.csv?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-06-20 11:23:24,269 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:23:24] "[36mGET /download/predicted_file.csv?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-06-20 11:23:24,707 ] 224 werkzeug - INFO -  * Detected change in 'D:\\my stuff.dll\\New Courses\\PWSkills\\PWSkills Data Science\\MLProjectsPW\\WaferFaultDetection\\app.py', reloading

@@ -1,0 +1,126 @@
+[ 2024-06-20 09:16:34,923 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2024-06-20 09:16:34,955 ] 224 werkzeug - INFO -  * Debugger PIN: 126-193-033
+[ 2024-06-20 09:16:42,604 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 09:16:42] "GET / HTTP/1.1" 200 -
+[ 2024-06-20 09:17:03,073 ] 50 root - INFO - Training Pipeline has been initiated
+[ 2024-06-20 09:17:03,074 ] 15 root - INFO - Data Ingestion pipeline started
+[ 2024-06-20 09:17:03,074 ] 86 root - INFO - Entered initiate_data_ingestion method of DataIngestion class
+[ 2024-06-20 09:17:03,075 ] 56 root - INFO - Exporting data from mongodb
+[ 2024-06-20 09:17:03,075 ] 60 root - INFO - creating a variable and calling the fn:export_collection_as_dataframe
+[ 2024-06-20 09:17:03,077 ] 27 root - INFO - Fetching the dataframe from mongodb data base
+[ 2024-06-20 09:17:10,033 ] 64 root - INFO - saving exported data into feature store file path:artifacts
+[ 2024-06-20 09:17:10,169 ] 89 root - INFO - got the data from mongodb
+[ 2024-06-20 09:17:10,170 ] 90 root - INFO - Exited initiate_data_ingestion method of DataIngestion class
+[ 2024-06-20 09:17:10,170 ] 27 root - INFO - Data transformation pipeline started
+[ 2024-06-20 09:17:10,170 ] 87 root - INFO - Data Transformation has started
+[ 2024-06-20 09:17:10,170 ] 47 root - INFO - Reading the raw data from wafer.csv stored in artifact folder
+[ 2024-06-20 09:17:10,367 ] 91 root - INFO - segregating independent and dependent values
+[ 2024-06-20 09:17:10,371 ] 95 root - INFO - splitting the data into training and testing dataset
+[ 2024-06-20 09:17:10,411 ] 98 root - INFO - Obtaining object of preprocessor from fn: get_data_transformation_object
+[ 2024-06-20 09:17:10,412 ] 60 root - INFO - Data Transformation initiated
+[ 2024-06-20 09:17:10,413 ] 64 root - INFO - Initiating pipeline and creating object of pipeline
+[ 2024-06-20 09:17:10,414 ] 68 root - INFO - Data transformation pipeline complete
+[ 2024-06-20 09:17:10,414 ] 101 root - INFO - Applying the transformation
+[ 2024-06-20 09:17:10,801 ] 105 root - INFO - Concatinating train and test input_features_arr with target_feature_arr
+[ 2024-06-20 09:17:10,801 ] 109 root - INFO - Saving of processor.pkl file started
+[ 2024-06-20 09:17:10,802 ] 15 root - INFO - Save object fn. start
+[ 2024-06-20 09:17:10,804 ] 113 root - INFO - preprocessor.pkl is created and saved
+[ 2024-06-20 09:17:10,805 ] 39 root - INFO - Model training pipeline started
+[ 2024-06-20 09:17:10,806 ] 78 root - INFO - Model training has begun
+[ 2024-06-20 09:17:10,806 ] 79 root - INFO - Splitting training and testing data into dependent and independent features
+[ 2024-06-20 09:17:10,806 ] 86 root - INFO - Evaluating models
+[ 2024-06-20 09:17:10,806 ] 40 root - INFO - Evaluation of the models has begun
+[ 2024-06-20 09:17:10,808 ] 43 root - INFO - Collecting the report for each models
+[ 2024-06-20 09:17:16,052 ] 51 root - INFO - models has been trained and this is their report
+{'XGBClassifier': 0.9375, 'GradientBoostingClassifier': 0.875, 'SVC': 0.9375, 'RandomForestClassifier': 0.9375}
+[ 2024-06-20 09:17:16,053 ] 89 root - INFO - Fetching the best model and its score
+[ 2024-06-20 09:17:16,053 ] 92 root - INFO - best model and its score is
+XGBClassifier:0.9375
+[ 2024-06-20 09:17:16,053 ] 96 root - INFO - Fine tunning the best model
+[ 2024-06-20 09:17:16,054 ] 61 root - INFO - Fine tune of the model has begun
+[ 2024-06-20 09:17:16,054 ] 25 root - INFO - read_yaml_file fn. start
+[ 2024-06-20 09:17:16,132 ] 29 root - INFO - yaml file loaded succesfully
+[ 2024-06-20 09:24:50,208 ] 224 werkzeug - INFO -  * Detected change in 'd:\\my stuff.dll\\new courses\\pwskills\\pwskills data science\\mlprojectspw\\waferfaultdetection\\src\\components\\data_transformation.py', reloading
+[ 2024-06-20 09:24:50,638 ] 28 concurrent.futures - ERROR - exception calling callback for <Future at 0x13c1b688e20 state=finished returned list>
+Traceback (most recent call last):
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\externals\loky\_base.py", line 26, in _invoke_callbacks
+    callback(self)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 828, in __call__
+    self._dispatch_new()
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 843, in _dispatch_new
+    self.parallel.dispatch_next()
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 1429, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 1517, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 1418, in _dispatch
+    job = self._backend.apply_async(batch, callback=batch_tracker)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\_parallel_backends.py", line 588, in apply_async
+    future = self._workers.submit(func)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\externals\loky\reusable_executor.py", line 225, in submit
+    return super().submit(fn, *args, **kwargs)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 1228, in submit
+    raise ShutdownExecutorError(
+joblib.externals.loky.process_executor.ShutdownExecutorError: cannot schedule new futures after shutdown
+[ 2024-06-20 09:24:52,284 ] 28 concurrent.futures - ERROR - exception calling callback for <Future at 0x13c1b1ab850 state=finished returned list>
+Traceback (most recent call last):
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\externals\loky\_base.py", line 26, in _invoke_callbacks
+    callback(self)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 828, in __call__
+    self._dispatch_new()
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 843, in _dispatch_new
+    self.parallel.dispatch_next()
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 1429, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 1517, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 1418, in _dispatch
+    job = self._backend.apply_async(batch, callback=batch_tracker)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\_parallel_backends.py", line 588, in apply_async
+    future = self._workers.submit(func)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\externals\loky\reusable_executor.py", line 225, in submit
+    return super().submit(fn, *args, **kwargs)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 1228, in submit
+    raise ShutdownExecutorError(
+joblib.externals.loky.process_executor.ShutdownExecutorError: cannot schedule new futures after shutdown
+[ 2024-06-20 09:24:52,384 ] 28 concurrent.futures - ERROR - exception calling callback for <Future at 0x13c1b1ab580 state=finished returned list>
+Traceback (most recent call last):
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\externals\loky\_base.py", line 26, in _invoke_callbacks
+    callback(self)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 828, in __call__
+    self._dispatch_new()
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 843, in _dispatch_new
+    self.parallel.dispatch_next()
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 1429, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 1517, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 1418, in _dispatch
+    job = self._backend.apply_async(batch, callback=batch_tracker)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\_parallel_backends.py", line 588, in apply_async
+    future = self._workers.submit(func)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\externals\loky\reusable_executor.py", line 225, in submit
+    return super().submit(fn, *args, **kwargs)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 1228, in submit
+    raise ShutdownExecutorError(
+joblib.externals.loky.process_executor.ShutdownExecutorError: cannot schedule new futures after shutdown
+[ 2024-06-20 09:24:53,850 ] 28 concurrent.futures - ERROR - exception calling callback for <Future at 0x13c1b1abcd0 state=finished returned list>
+Traceback (most recent call last):
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\externals\loky\_base.py", line 26, in _invoke_callbacks
+    callback(self)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 828, in __call__
+    self._dispatch_new()
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 843, in _dispatch_new
+    self.parallel.dispatch_next()
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 1429, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 1517, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\parallel.py", line 1418, in _dispatch
+    job = self._backend.apply_async(batch, callback=batch_tracker)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\_parallel_backends.py", line 588, in apply_async
+    future = self._workers.submit(func)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\externals\loky\reusable_executor.py", line 225, in submit
+    return super().submit(fn, *args, **kwargs)
+  File "D:\my stuff.dll\New Courses\PWSkills\PWSkills Data Science\MLProjectsPW\WaferFaultDetection\venv\lib\site-packages\joblib\externals\loky\process_executor.py", line 1228, in submit
+    raise ShutdownExecutorError(
+joblib.externals.loky.process_executor.ShutdownExecutorError: cannot schedule new futures after shutdown

@@ -1,0 +1,50 @@
+[ 2024-06-20 09:25:09,257 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2024-06-20 09:25:09,285 ] 224 werkzeug - INFO -  * Debugger PIN: 126-193-033
+[ 2024-06-20 09:25:22,769 ] 50 root - INFO - Training Pipeline has been initiated
+[ 2024-06-20 09:25:22,770 ] 15 root - INFO - Data Ingestion pipeline started
+[ 2024-06-20 09:25:22,770 ] 86 root - INFO - Entered initiate_data_ingestion method of DataIngestion class
+[ 2024-06-20 09:25:22,771 ] 56 root - INFO - Exporting data from mongodb
+[ 2024-06-20 09:25:22,771 ] 60 root - INFO - creating a variable and calling the fn:export_collection_as_dataframe
+[ 2024-06-20 09:25:22,772 ] 27 root - INFO - Fetching the dataframe from mongodb data base
+[ 2024-06-20 09:25:30,118 ] 64 root - INFO - saving exported data into feature store file path:artifacts
+[ 2024-06-20 09:25:30,243 ] 89 root - INFO - got the data from mongodb
+[ 2024-06-20 09:25:30,243 ] 90 root - INFO - Exited initiate_data_ingestion method of DataIngestion class
+[ 2024-06-20 09:25:30,243 ] 27 root - INFO - Data transformation pipeline started
+[ 2024-06-20 09:25:30,243 ] 87 root - INFO - Data Transformation has started
+[ 2024-06-20 09:25:30,244 ] 47 root - INFO - Reading the raw data from wafer.csv stored in artifact folder
+[ 2024-06-20 09:25:30,420 ] 91 root - INFO - segregating independent and dependent values
+[ 2024-06-20 09:25:30,423 ] 95 root - INFO - splitting the data into training and testing dataset
+[ 2024-06-20 09:25:30,428 ] 98 root - INFO - Obtaining object of preprocessor from fn: get_data_transformation_object
+[ 2024-06-20 09:25:30,428 ] 60 root - INFO - Data Transformation initiated
+[ 2024-06-20 09:25:30,428 ] 64 root - INFO - Initiating pipeline and creating object of pipeline
+[ 2024-06-20 09:25:30,428 ] 68 root - INFO - Data transformation pipeline complete
+[ 2024-06-20 09:25:30,429 ] 101 root - INFO - Applying the transformation
+[ 2024-06-20 09:25:30,900 ] 105 root - INFO - Concatinating train and test input_features_arr with target_feature_arr
+[ 2024-06-20 09:25:30,901 ] 109 root - INFO - Saving of preprocessor.pkl file started
+[ 2024-06-20 09:25:30,902 ] 15 root - INFO - Save object fn. start
+[ 2024-06-20 09:25:30,903 ] 113 root - INFO - preprocessor.pkl is created and saved
+[ 2024-06-20 09:25:30,904 ] 39 root - INFO - Model training pipeline started
+[ 2024-06-20 09:25:30,905 ] 78 root - INFO - Model training has begun
+[ 2024-06-20 09:25:30,905 ] 79 root - INFO - Splitting training and testing data into dependent and independent features
+[ 2024-06-20 09:25:30,905 ] 86 root - INFO - Evaluating models
+[ 2024-06-20 09:25:30,905 ] 40 root - INFO - Evaluation of the models has begun
+[ 2024-06-20 09:25:30,907 ] 43 root - INFO - Collecting the report for each models
+[ 2024-06-20 09:25:37,887 ] 51 root - INFO - models has been trained and this is their report
+{'XGBClassifier': 1.0, 'GradientBoostingClassifier': 1.0, 'SVC': 1.0, 'RandomForestClassifier': 1.0}
+[ 2024-06-20 09:25:37,887 ] 89 root - INFO - Fetching the best model and its score
+[ 2024-06-20 09:25:37,887 ] 92 root - INFO - best model and its score is
+XGBClassifier:1.0
+[ 2024-06-20 09:25:37,888 ] 96 root - INFO - Fine tunning the best model
+[ 2024-06-20 09:25:37,888 ] 61 root - INFO - Fine tune of the model has begun
+[ 2024-06-20 09:25:37,888 ] 25 root - INFO - read_yaml_file fn. start
+[ 2024-06-20 09:25:37,918 ] 29 root - INFO - yaml file loaded succesfully
+[ 2024-06-20 09:37:11,559 ] 67 root - INFO - Fine tune of the XGBClassifier model has completed
+[ 2024-06-20 09:37:11,560 ] 68 root - INFO - Best parameters for XGBClassifier are as follows
+{'gamma': 0, 'learning_rate': 0.001, 'max_depth': 3, 'n_estimators': 100}
+[ 2024-06-20 09:37:12,698 ] 106 root - INFO - XGBClassifier and its score:0.85
+[ 2024-06-20 09:37:12,699 ] 111 root - INFO - Best model has been found
+[ 2024-06-20 09:37:12,699 ] 112 root - INFO - Saving best model at path:artifacts
+[ 2024-06-20 09:37:12,809 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 09:37:12] "[35m[1mGET /train HTTP/1.1[0m" 500 -
+[ 2024-06-20 09:37:13,487 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 09:37:13] "[36mGET /train?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-06-20 09:37:13,496 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 09:37:13] "[36mGET /train?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-06-20 09:37:13,758 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 09:37:13] "[36mGET /train?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -

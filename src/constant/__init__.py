@@ -5,8 +5,8 @@ AWS_S3_BUCKET_NAME = "wafer-fault"
 MONGO_DATABASE_NAME = "wafer"
 MONGO_COLLECTION_NAME = "waferfault"
 
-TARGET_COLUMN = "quality"
-MONGO_DB_URL="mongodb+srv://snshrivas:Snshrivas@cluster0.u46c4.mongodb.net/?retryWrites=true&w=majority"
+TARGET_COLUMN = "Good/Bad"
+MONGO_DB_URL="mongodb+srv://SHP50c:alphamikefoxtrot@waferfaultdetection.ftdmtif.mongodb.net/?retryWrites=true&w=majority&appName=WaferFaultDetection"
 
 MODEL_FILE_NAME = "model"
 MODEL_FILE_EXTENSION = ".pkl"

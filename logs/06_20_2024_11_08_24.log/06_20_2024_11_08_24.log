@@ -1,0 +1,32 @@
+[ 2024-06-20 11:08:32,017 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2024-06-20 11:08:32,043 ] 224 werkzeug - INFO -  * Debugger PIN: 126-193-033
+[ 2024-06-20 11:08:40,786 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:08:40] "GET / HTTP/1.1" 200 -
+[ 2024-06-20 11:08:40,789 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:08:40] "GET / HTTP/1.1" 200 -
+[ 2024-06-20 11:08:45,884 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:08:45] "GET /predict HTTP/1.1" 200 -
+[ 2024-06-20 11:08:46,446 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:08:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+[ 2024-06-20 11:08:46,514 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:08:46] "[33mGET /script.js HTTP/1.1[0m" 404 -
+[ 2024-06-20 11:08:57,163 ] 107 root - INFO - Prediction pipeline has begun
+[ 2024-06-20 11:08:57,164 ] 43 root - INFO - Creating the file path
+[ 2024-06-20 11:08:57,176 ] 84 root - INFO - Dataframe has been received from the user
+[ 2024-06-20 11:08:57,177 ] 86 root - INFO - Dataframe is being converted to pandas dataframe
+[ 2024-06-20 11:08:57,391 ] 88 root - INFO - Cleaning the data
+[ 2024-06-20 11:08:57,392 ] 59 root - INFO - Predicting the output
+[ 2024-06-20 11:08:57,393 ] 36 root - INFO - Load object fn. start
+[ 2024-06-20 11:08:57,416 ] 40 root - INFO - object was loaded sucessfully
+[ 2024-06-20 11:08:57,417 ] 36 root - INFO - Load object fn. start
+[ 2024-06-20 11:08:57,439 ] 40 root - INFO - object was loaded sucessfully
+[ 2024-06-20 11:08:57,477 ] 64 root - INFO - Prediction was done sucessfully
+[ 2024-06-20 11:08:57,478 ] 91 root - INFO - Creating the prediction column in dataframe and decoding the output
+[ 2024-06-20 11:08:57,484 ] 95 root - INFO - Saving the predicted dataframe
+[ 2024-06-20 11:08:57,610 ] 98 root - INFO - Prediction completed
+[ 2024-06-20 11:08:57,610 ] 110 root - INFO - Prediction pipeline completed
+[ 2024-06-20 11:08:57,611 ] 38 root - INFO - Prediction completed. Downloading prediction file.
+[ 2024-06-20 11:08:57,611 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:08:57] "POST /predict HTTP/1.1" 200 -
+[ 2024-06-20 11:09:34,041 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:09:34] "[35m[1mGET /download/predicted_file.csv HTTP/1.1[0m" 500 -
+[ 2024-06-20 11:09:34,448 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:09:34] "GET /download/predicted_file.csv?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[ 2024-06-20 11:09:34,820 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:09:34] "GET /download/predicted_file.csv?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[ 2024-06-20 11:09:34,837 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:09:34] "GET /download/?__debugger__=yes&cmd=resource&f=more.png HTTP/1.1" 200 -
+[ 2024-06-20 11:09:34,848 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:09:34] "GET /download/?__debugger__=yes&cmd=resource&f=less.png HTTP/1.1" 200 -
+[ 2024-06-20 11:09:35,459 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:09:35] "GET /download/predicted_file.csv?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[ 2024-06-20 11:09:35,743 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 11:09:35] "[36mGET /download/predicted_file.csv?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-06-20 11:11:34,194 ] 224 werkzeug - INFO -  * Detected change in 'd:\\my stuff.dll\\new courses\\pwskills\\pwskills data science\\mlprojectspw\\waferfaultdetection\\app.py', reloading

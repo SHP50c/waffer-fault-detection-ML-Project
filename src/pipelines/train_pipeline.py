@@ -45,7 +45,7 @@ class TrainingPipeline:
             logging.info("exception occured in fn:start_model_trainer")
             raise CustomException(e,sys)
         
-    def run_pipeline(self):
+    def run_TrainingPipeline(self):
         try:
             logging.info('Training Pipeline has been initiated')
             feature_store_file_path=self.start_data_ingestion()
@@ -54,5 +54,5 @@ class TrainingPipeline:
             logging.info(f'Training Pipeline completed. Trained model score is {r2_square}')
 
         except CustomException as e:
-            logging.info("exception occured in  fn:run_pipeline")
+            logging.info("exception occured in  fn:run_TrainingPipeline")
             raise CustomException(e,sys)

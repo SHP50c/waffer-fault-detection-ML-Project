@@ -1,0 +1,89 @@
+[ 2024-06-20 09:57:31,887 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2024-06-20 09:57:31,911 ] 224 werkzeug - INFO -  * Debugger PIN: 126-193-033
+[ 2024-06-20 09:57:38,289 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 09:57:38] "GET / HTTP/1.1" 200 -
+[ 2024-06-20 09:57:53,695 ] 50 root - INFO - Training Pipeline has been initiated
+[ 2024-06-20 09:57:53,695 ] 15 root - INFO - Data Ingestion pipeline started
+[ 2024-06-20 09:57:53,696 ] 86 root - INFO - Entered initiate_data_ingestion method of DataIngestion class
+[ 2024-06-20 09:57:53,696 ] 56 root - INFO - Exporting data from mongodb
+[ 2024-06-20 09:57:53,696 ] 60 root - INFO - creating a variable and calling the fn:export_collection_as_dataframe
+[ 2024-06-20 09:57:53,697 ] 27 root - INFO - Fetching the dataframe from mongodb data base
+[ 2024-06-20 09:58:00,391 ] 64 root - INFO - saving exported data into feature store file path:artifacts
+[ 2024-06-20 09:58:00,527 ] 89 root - INFO - got the data from mongodb
+[ 2024-06-20 09:58:00,527 ] 90 root - INFO - Exited initiate_data_ingestion method of DataIngestion class
+[ 2024-06-20 09:58:00,527 ] 27 root - INFO - Data transformation pipeline started
+[ 2024-06-20 09:58:00,527 ] 87 root - INFO - Data Transformation has started
+[ 2024-06-20 09:58:00,528 ] 47 root - INFO - Reading the raw data from wafer.csv stored in artifact folder
+[ 2024-06-20 09:58:00,760 ] 91 root - INFO - segregating independent and dependent values
+[ 2024-06-20 09:58:00,763 ] 95 root - INFO - splitting the data into training and testing dataset
+[ 2024-06-20 09:58:00,767 ] 98 root - INFO - Obtaining object of preprocessor from fn: get_data_transformation_object
+[ 2024-06-20 09:58:00,767 ] 60 root - INFO - Data Transformation initiated
+[ 2024-06-20 09:58:00,767 ] 64 root - INFO - Initiating pipeline and creating object of pipeline
+[ 2024-06-20 09:58:00,767 ] 68 root - INFO - Data transformation pipeline complete
+[ 2024-06-20 09:58:00,768 ] 101 root - INFO - Applying the transformation
+[ 2024-06-20 09:58:01,157 ] 105 root - INFO - Concatinating train and test input_features_arr with target_feature_arr
+[ 2024-06-20 09:58:01,158 ] 109 root - INFO - Saving of preprocessor.pkl file started
+[ 2024-06-20 09:58:01,159 ] 15 root - INFO - Save object fn. start
+[ 2024-06-20 09:58:01,160 ] 113 root - INFO - preprocessor.pkl is created and saved
+[ 2024-06-20 09:58:01,161 ] 39 root - INFO - Model training pipeline started
+[ 2024-06-20 09:58:01,161 ] 78 root - INFO - Model training has begun
+[ 2024-06-20 09:58:01,162 ] 79 root - INFO - Splitting training and testing data into dependent and independent features
+[ 2024-06-20 09:58:01,162 ] 86 root - INFO - Evaluating models
+[ 2024-06-20 09:58:01,162 ] 40 root - INFO - Evaluation of the models has begun
+[ 2024-06-20 09:58:01,164 ] 43 root - INFO - Collecting the report for each models
+[ 2024-06-20 09:58:08,602 ] 51 root - INFO - models has been trained and this is their report
+{'XGBClassifier': 0.9375, 'GradientBoostingClassifier': 0.9375, 'SVC': 0.9375, 'RandomForestClassifier': 0.9375}
+[ 2024-06-20 09:58:08,602 ] 89 root - INFO - Fetching the best model and its score
+[ 2024-06-20 09:58:08,603 ] 92 root - INFO - best model and its score is
+XGBClassifier:0.9375
+[ 2024-06-20 09:58:08,604 ] 96 root - INFO - Fine tunning the best model
+[ 2024-06-20 09:58:08,605 ] 61 root - INFO - Fine tune of the model has begun
+[ 2024-06-20 09:58:08,605 ] 25 root - INFO - read_yaml_file fn. start
+[ 2024-06-20 09:58:08,628 ] 29 root - INFO - yaml file loaded succesfully
+[ 2024-06-20 10:05:43,035 ] 67 root - INFO - Fine tune of the XGBClassifier model has completed
+[ 2024-06-20 10:05:43,035 ] 68 root - INFO - Best parameters for XGBClassifier are as follows
+{'gamma': 0, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100}
+[ 2024-06-20 10:05:43,947 ] 106 root - INFO - XGBClassifier and its score:0.95
+[ 2024-06-20 10:05:43,947 ] 111 root - INFO - Best model has been found
+[ 2024-06-20 10:05:43,947 ] 112 root - INFO - Saving best model at path:artifacts\model.pkl
+[ 2024-06-20 10:05:43,948 ] 15 root - INFO - Save object fn. start
+[ 2024-06-20 10:05:43,958 ] 115 root - INFO - Best model has been saved sucessfully
+[ 2024-06-20 10:05:43,959 ] 54 root - INFO - Training Pipeline completed. Trained model score is 0.95
+[ 2024-06-20 10:05:43,961 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:05:43] "GET /train HTTP/1.1" 200 -
+[ 2024-06-20 10:10:42,640 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:10:42] "GET /predict HTTP/1.1" 200 -
+[ 2024-06-20 10:10:42,789 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:10:42] "GET /static/css/style.css HTTP/1.1" 200 -
+[ 2024-06-20 10:10:42,874 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:10:42] "[33mGET /script.js HTTP/1.1[0m" 404 -
+[ 2024-06-20 10:10:49,619 ] 107 root - INFO - Prediction pipeline has begun
+[ 2024-06-20 10:10:49,620 ] 43 root - INFO - Creating the file path
+[ 2024-06-20 10:10:49,702 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:10:49] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[ 2024-06-20 10:10:49,973 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:10:49] "GET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[ 2024-06-20 10:10:50,013 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:10:50] "GET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[ 2024-06-20 10:10:50,544 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:10:50] "GET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[ 2024-06-20 10:10:50,811 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:10:50] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:12:27,186 ] 107 root - INFO - Prediction pipeline has begun
+[ 2024-06-20 10:12:27,187 ] 43 root - INFO - Creating the file path
+[ 2024-06-20 10:12:27,266 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:12:27] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[ 2024-06-20 10:12:27,671 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:12:27] "[36mGET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:12:27,673 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:12:27] "[36mGET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:12:28,207 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:12:28] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:12:28,447 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:12:28] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:12:41,219 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:12:41] "GET / HTTP/1.1" 200 -
+[ 2024-06-20 10:12:46,965 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:12:46] "GET /predict HTTP/1.1" 200 -
+[ 2024-06-20 10:12:47,273 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:12:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:12:47,389 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:12:47] "[33mGET /script.js HTTP/1.1[0m" 404 -
+[ 2024-06-20 10:14:21,320 ] 107 root - INFO - Prediction pipeline has begun
+[ 2024-06-20 10:14:21,321 ] 43 root - INFO - Creating the file path
+[ 2024-06-20 10:14:21,399 ] 84 root - INFO - Dataframe has been received from the user
+[ 2024-06-20 10:14:21,399 ] 86 root - INFO - Dataframe is being converted to pandas dataframe
+[ 2024-06-20 10:14:21,546 ] 88 root - INFO - Cleaning the data
+[ 2024-06-20 10:14:21,547 ] 59 root - INFO - Predicting the output
+[ 2024-06-20 10:14:21,547 ] 36 root - INFO - Load object fn. start
+[ 2024-06-20 10:14:21,567 ] 40 root - INFO - object was loaded sucessfully
+[ 2024-06-20 10:14:21,568 ] 36 root - INFO - Load object fn. start
+[ 2024-06-20 10:14:21,586 ] 40 root - INFO - object was loaded sucessfully
+[ 2024-06-20 10:14:21,615 ] 64 root - INFO - Prediction was done sucessfully
+[ 2024-06-20 10:14:21,615 ] 91 root - INFO - Creating the prediction column in dataframe and decoding the output
+[ 2024-06-20 10:14:21,653 ] 95 root - INFO - Saving the predicted dataframe
+[ 2024-06-20 10:14:21,767 ] 98 root - INFO - Prediction completed
+[ 2024-06-20 10:14:21,767 ] 110 root - INFO - Prediction pipeline completed
+[ 2024-06-20 10:14:21,768 ] 40 root - INFO - prediction completed. Downloading prediction file.
+[ 2024-06-20 10:14:21,809 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:14:21] "POST /predict HTTP/1.1" 200 -

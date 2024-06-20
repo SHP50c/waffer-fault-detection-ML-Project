@@ -1,0 +1,41 @@
+[ 2024-06-20 10:40:34,272 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2024-06-20 10:40:34,298 ] 224 werkzeug - INFO -  * Debugger PIN: 126-193-033
+[ 2024-06-20 10:40:43,664 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:40:43] "GET /predict HTTP/1.1" 200 -
+[ 2024-06-20 10:40:43,733 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:40:43] "[33mGET /script.js HTTP/1.1[0m" 404 -
+[ 2024-06-20 10:40:43,802 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:40:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:40:47,025 ] 107 root - INFO - Prediction pipeline has begun
+[ 2024-06-20 10:40:47,025 ] 43 root - INFO - Creating the file path
+[ 2024-06-20 10:40:47,091 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:40:47] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[ 2024-06-20 10:40:47,886 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:40:47] "[36mGET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:40:47,888 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:40:47] "[36mGET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:40:48,504 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:40:48] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:40:48,756 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:40:48] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:43:58,072 ] 107 root - INFO - Prediction pipeline has begun
+[ 2024-06-20 10:43:58,073 ] 43 root - INFO - Creating the file path
+[ 2024-06-20 10:43:58,134 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:43:58] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[ 2024-06-20 10:43:58,353 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:43:58] "[36mGET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:43:58,357 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:43:58] "[36mGET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:43:58,916 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:43:58] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:43:59,184 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:43:59] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:44:06,501 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:44:06] "GET / HTTP/1.1" 200 -
+[ 2024-06-20 10:44:12,747 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:44:12] "GET /predict HTTP/1.1" 200 -
+[ 2024-06-20 10:44:12,835 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:44:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+[ 2024-06-20 10:44:13,136 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:44:13] "[33mGET /script.js HTTP/1.1[0m" 404 -
+[ 2024-06-20 10:44:28,047 ] 107 root - INFO - Prediction pipeline has begun
+[ 2024-06-20 10:44:28,048 ] 43 root - INFO - Creating the file path
+[ 2024-06-20 10:44:28,061 ] 84 root - INFO - Dataframe has been received from the user
+[ 2024-06-20 10:44:28,062 ] 86 root - INFO - Dataframe is being converted to pandas dataframe
+[ 2024-06-20 10:44:28,254 ] 88 root - INFO - Cleaning the data
+[ 2024-06-20 10:44:28,254 ] 59 root - INFO - Predicting the output
+[ 2024-06-20 10:44:28,254 ] 36 root - INFO - Load object fn. start
+[ 2024-06-20 10:44:28,263 ] 40 root - INFO - object was loaded sucessfully
+[ 2024-06-20 10:44:28,263 ] 36 root - INFO - Load object fn. start
+[ 2024-06-20 10:44:28,264 ] 40 root - INFO - object was loaded sucessfully
+[ 2024-06-20 10:44:28,306 ] 64 root - INFO - Prediction was done sucessfully
+[ 2024-06-20 10:44:28,307 ] 91 root - INFO - Creating the prediction column in dataframe and decoding the output
+[ 2024-06-20 10:44:28,314 ] 95 root - INFO - Saving the predicted dataframe
+[ 2024-06-20 10:44:28,436 ] 98 root - INFO - Prediction completed
+[ 2024-06-20 10:44:28,437 ] 110 root - INFO - Prediction pipeline completed
+[ 2024-06-20 10:44:28,437 ] 40 root - INFO - prediction completed. Downloading prediction file.
+[ 2024-06-20 10:44:28,477 ] 224 werkzeug - INFO - 127.0.0.1 - - [20/Jun/2024 10:44:28] "POST /predict HTTP/1.1" 200 -
+[ 2024-06-20 10:45:54,961 ] 224 werkzeug - INFO -  * Detected change in 'd:\\my stuff.dll\\new courses\\pwskills\\pwskills data science\\mlprojectspw\\waferfaultdetection\\app.py', reloading
