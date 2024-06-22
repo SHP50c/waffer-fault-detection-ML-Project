@@ -11,7 +11,8 @@ In electronics, a wafer (also called a slice or substrate) is a thin slice of se
 4. [Deployment](#deployment)
 5. [Running the Project](#running-the-project)
 6. [Conclusion](#conclusion)
-7. [Hashtags](#hashtags)
+7. [Images of project running](#images-of-project-running)
+8. [Hashtags](#hashtags)
 
 ## Project Structure
 
@@ -111,6 +112,13 @@ To run this project, complete the steps mentioned in the Prerequisites section. 
 ## Conclusion
 
 This project demonstrates a modular approach to building a wafer fault detection system using Python, Docker, and AWS. It includes all necessary steps from data ingestion and transformation to model training and deployment.
+
+## Images of project running
+![alt text](home_page.jpg)
+![alt text](<training page.jpg>)
+![alt text](<Prediction file.jpg>)
+![alt text](<predicted file downloaded.jpg>)
+![alt text](Train_dataset_saved_in_mongodb_atlas.jpg)
 
 ## Hashtags
 
